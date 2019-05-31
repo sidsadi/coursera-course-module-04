@@ -1,14 +1,3 @@
-var names = [yasir", "Jawad", "John", "Javeed", "Parihan", "Farukh", "Larib", "Piya", "Laiba", "Jahnjaeeb"]
-for var (i=0; i< name.length;i++){
- var firstletter = names[i].CharAt(0).toLowerCase();
- if (firstletter === 'j'){
- GoodBye.jSomeName(names[i]);
- else{
- hello SomeName(names[i]);
- }
- }  
- 
-
 (function (window){
     var byeSpeaker = {};
     var speakWord = "Good Bye";
@@ -16,17 +5,32 @@ for var (i=0; i< name.length;i++){
     byeSpeaker.speak = function (names) {
       console.log(speakWord + " " + names);
     }
+    window.byeSpeaker = byeSpeaker;
+    })(window);
+
+
+    (function (window) {  
+        var helloSpeaker = {};
+        var speakWord = "Hello";
+        
+        helloSpeaker.speak = function (names) {
+          console.log(speakWord + " " + names);
+        }
+            window.helloSpeaker = helloSpeaker;
+        })  (window);
      
-     window.byeSpeaker = byeSpeaker;
-    })(window);
 
 
-(function (window) {  
-    var helloSpeaker = {};
-    var speakWord = "Hello";
+(function () {
+
+    var names = ["Yasir", "Jawad", "Jahnjeeb", "Javeed", "Pariyan", "Farukh", "Larib", "Piya", "Laiba", "John"];
+    for (var i in names) {
+        var firstLetter = ((names[3]).charAt(0)).toLowerCase();
+        if (firstLetter == 'j') {
+           window.byeSpeaker.speak(names[3]);
+        } else {
+           window.helloSpeaker.speak(names[3]);
+        }
+      }
+      })(window);
     
-    helloSpeaker.speak = function (names) {
-      console.log(speakWord + " " + names);
-    }
-        window.helloSpeaker = helloSpeaker;
-    })(window);
