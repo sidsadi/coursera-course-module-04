@@ -25,11 +25,12 @@
 
     var names = ["Yasir", "Jawad", "Jahnjeeb", "Javeed", "Pariyan", "Farukh", "Larib", "Piya", "Laiba", "John"];
     for (var i in names) {
-        var firstLetter = ((names[3]).charAt(0)).toLowerCase();
+        var firstLetter = ((names[i]).charAt(0)).toLowerCase();
         if (firstLetter == 'j') {
-           window.byeSpeaker.speak(names[3]);
-        } else {
-           window.helloSpeaker.speak(names[3]);
+           window.byeSpeaker.speak(names[i]);
+        } 
+        else {
+           window.helloSpeaker.speak(names[i]);
         }
       }
       })(window);
