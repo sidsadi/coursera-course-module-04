@@ -7,15 +7,26 @@ for var (i=0; i< name.length;i++){
  hello SomeName(names[i]);
  }
  }  
-    })();
+ 
 
 (function (window){
-    var jSomeName = {};
+    var byeSpeaker = {};
     var speakWord = "Good Bye";
     
-    jsomeName.speak = function (names) {
+    byeSpeaker.speak = function (names) {
       console.log(speakWord + " " + names);
     }
      
-     window.jSomeName = SomeName;
+     window.byeSpeaker = byeSpeaker;
+    })(window);
+
+
+(function (window) {  
+    var helloSpeaker = {};
+    var speakWord = "Hello";
+    
+    helloSpeaker.speak = function (names) {
+      console.log(speakWord + " " + names);
+    }
+        window.helloSpeaker = helloSpeaker;
     })(window);
